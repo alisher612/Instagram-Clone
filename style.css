@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    padding: 0 250px;
+    height: 85vh; /* Adjusted to fit footer */
+    padding-bottom: 10px;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mobile-frame {
+    position: relative;
+    height: 500px;
+    width: 400px;
+}
+
+.frame {
+    position: absolute;
+    height: 120%;
+    width: 110%;
+    z-index: 1;
+}
+
+
+/* Slideshow Styling */
+.slideshow {
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    height: 510px;
+    width: 290px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.slideshow img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    opacity: 0;
+    animation: fade 16s infinite; /* Total time for all images */
+    transition: opacity 2s ease-in-out;
+}
+
+.slideshow img:nth-child(1) {
+    animation-delay: 0s;
+}
+.slideshow img:nth-child(2) {
+    animation-delay: 4s;
+}
+.slideshow img:nth-child(3) {
+    animation-delay: 8s;
+}
+.slideshow img:nth-child(4) {
+    animation-delay: 12s;
+}
+
+/* Fade Animation */
+@keyframes fade {
+    0% {
+        opacity: 0; /* Image starts hidden */
+    }
+    10% {
+        opacity: 1; /* Image fades in */
+    }
+    40% {
+        opacity: 1; /* Image stays fully visible */
+    }
+    50% {
+        opacity: 0; /* Image starts fading out */
+    }
+    100% {
+        opacity: 0; /* Image remains hidden until the next cycle */
+    }
+}
+
+/* right-section*/
+.right-section {
+    max-width: 400px; /* Restricts the width of the section */
+    text-align: center; /* Centers the text inside */
+    flex: 1; /* Makes it responsive within the parent container */
+    margin: 50px auto 0 auto; /* Adds space from the top and centers horizontally */
+    margin-top: 110px;
+}
+
+.login-box{
+    background: transparent;
+    border: 1px solid #646464;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.logo{
+    margin-bottom: 20px;
+}
+
+.input-box{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #646464;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.login-btn{
+    width: 75%;
+    padding: 10px;
+    background: #0775dd;
+    color: rgb(160, 158, 158);
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+}
+
+.devider{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.devider .line{
+    height: 1px;
+    background: #646464;
+    flex: 1;
+}
+
+.divider span {
+    margin: 0 10px;
+    color: #8e8e8e;
+    font-size: 3px;
+}
+
+.fb-login{
+    color: #3897f0;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.signup-box {
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #646464;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.signup-link {
+    color: #3897f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.app-links {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.store-button {
+    height: 30px;
+    width: 100px;
+    border: 1px solid #646464;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.store-button1 {
+    height: 30px;
+    width: 100px;
+    border: 1px solid #646464;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+/* Footer Section */
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 90px;
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #acaeaf;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #8e8e8e;
+    margin: 0;
+}
